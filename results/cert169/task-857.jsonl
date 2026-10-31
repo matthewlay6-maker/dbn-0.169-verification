@@ -1,0 +1,7 @@
+{"task": 857, "start": 1793453792.406902, "items": [["barrier", 0.0, 0.000955877391158301]]}
+{"mode":"barrier_step","t":0,"dt":1.473039e-05,"points":125830,"min_abs_f":1.990554e+00,"Dz":2.2094e+04,"Dt":1.1219e+05,"allow":5.582e-05}
+{"mode":"barrier_step","t":0.00037486230375241206,"dt":1.528510e-05,"points":125830,"min_abs_f":2.019710e+00,"Dz":2.1739e+04,"Dt":1.1038e+05,"allow":5.489e-05}
+{"mode":"barrier_step","t":0.00076391066343436248,"dt":1.586665e-05,"points":125830,"min_abs_f":2.049066e+00,"Dz":2.1378e+04,"Dt":1.0854e+05,"allow":5.394e-05}
+{"mode":"barrier","ta":0,"tb":0.000955877391158301,"t_reached":0.00095589452278288295,"ok":true,"steps":62,"min_abs_f":1.990554e+00,"N":691008,"points_fine":125830}
+{"item": ["barrier", 0.0, 0.000955877391158301], "returncode": 0, "seconds": 1680.3442959785461, "stderr_tail": "barrier: N=691008 points=125830 precompute done\n"}
+{"task": 857, "done": true, "end": 1793455473.0492003}

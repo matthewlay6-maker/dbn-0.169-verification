@@ -1,0 +1,4 @@
+{"task": 30, "start": 1793418358.2339716, "items": [["blockpart", 763308, 770942, 2, 600000002, {"DBN_PRIMES": "2,3,5,7,11", "DBN_TIGHT": 1}]]}
+{"mode":"block","Nminus":763308,"Nplus":770942,"slo":2,"shi":600000002,"full":false,"F_lower":6.147294424436e-02,"F_upper":6.147294424436e-02,"D":2310,"tight":1,"S_upper":6.79944866217443544e-01,"ca1_upper":2.58582189225603276e-01,"Z_upper":3.12595816311703472e-10,"sigma":1.687815018477}
+{"item": ["blockpart", 763308, 770942, 2, 600000002, {"DBN_PRIMES": "2,3,5,7,11", "DBN_TIGHT": 1}], "returncode": 0, "seconds": 129.43513798713684, "stderr_tail": ""}
+{"task": 30, "done": true, "end": 1793418488.0041845}

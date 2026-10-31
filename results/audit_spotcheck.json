@@ -1,0 +1,72 @@
+{
+ "t": 0.1595,
+ "windows": [
+  {
+   "centre": 6000000185827.0,
+   "length": 200.0,
+   "N": 690988,
+   "n_local_minima": 428,
+   "n_near_zeros": 428,
+   "min_slope_at_near_zero": 7.705004612377839,
+   "median_slope": 12.832099755266933,
+   "eC0_bound": 8.900375764577733e-07,
+   "runtime_s": 762.7850074768066
+  },
+  {
+   "centre": 6000001185827.0,
+   "length": 200.0,
+   "N": 690988,
+   "n_local_minima": 428,
+   "n_near_zeros": 428,
+   "min_slope_at_near_zero": 8.029895959789375,
+   "median_slope": 12.954223872969244,
+   "eC0_bound": 8.900374598399686e-07,
+   "runtime_s": 446.07816910743713
+  },
+  {
+   "centre": 6000100185827.0,
+   "length": 200.0,
+   "N": 690994,
+   "n_local_minima": 428,
+   "n_near_zeros": 428,
+   "min_slope_at_near_zero": 7.7347416355411145,
+   "median_slope": 12.948931510309425,
+   "eC0_bound": 8.900259148190051e-07,
+   "runtime_s": 331.2971580028534
+  },
+  {
+   "centre": 20000000000000.0,
+   "length": 200.0,
+   "N": 1261566,
+   "n_local_minima": 447,
+   "n_near_zeros": 447,
+   "min_slope_at_near_zero": 8.363784200040444,
+   "median_slope": 13.340297171798863,
+   "eC0_bound": 3.4046194901284297e-07,
+   "runtime_s": 867.3419809341431
+  },
+  {
+   "centre": 40000000000000.0,
+   "length": 200.0,
+   "N": 1784124,
+   "n_local_minima": 458,
+   "n_near_zeros": 458,
+   "min_slope_at_near_zero": 9.076424678059883,
+   "median_slope": 13.8547170747233,
+   "eC0_bound": 1.9324409447599324e-07,
+   "runtime_s": 2744.7425150871277
+  },
+  {
+   "centre": 66000000000000.0,
+   "length": 200.0,
+   "N": 2291748,
+   "n_local_minima": 466,
+   "n_near_zeros": 466,
+   "min_slope_at_near_zero": 9.077684587484946,
+   "median_slope": 14.088045998343539,
+   "eC0_bound": 1.2759050638546559e-07,
+   "runtime_s": 1315.2329256534576
+  }
+ ],
+ "runtime_s": 6467.485388994217
+}

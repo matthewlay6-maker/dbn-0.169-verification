@@ -1,0 +1,12 @@
+{
+ "windows": 2000,
+ "reproduced": 2000,
+ "exact_string_matches": 2000,
+ "mismatches": [],
+ "n_mismatches": 0,
+ "missing": [],
+ "min_floor": [
+  7.91366e-07,
+  690988
+ ]
+}

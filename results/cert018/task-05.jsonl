@@ -1,0 +1,40 @@
+{"task": 5, "start": 1793402651.7615695, "items": [["block", 40827922, 42461039], ["block", 39257617, 40827922], ["block", 31025863, 32266898], ["block", 20153803, 20959956], ["block", 16564954, 17227553], ["block", 14726182, 15315230], ["block", 10760274, 11190685], ["block", 8844158, 9197925], ["block", 7269252, 7560023], ["block", 5107276, 5311568], ["block", 4197807, 4365720], ["block", 3450288, 3588300], ["block", 2726810, 2835883], ["block", 2072149, 2155035], ["block", 1771279, 1842131], ["block", 1244474, 1294253], ["block", 1022864, 1063779], ["block", 840719, 874348], ["block", 691008, 718649]]}
+{"mode":"block","Nminus":40827922,"Nplus":42461039,"F_lower":8.041782373074e-01,"F_upper":8.041782373074e-01,"Z":5.395e-13,"sigma":2.059314525284}
+{"item": ["block", 40827922, 42461039], "returncode": 0, "seconds": 1101.9201414585114, "stderr_tail": ""}
+{"mode":"block","Nminus":39257617,"Nplus":40827922,"F_lower":8.020718681099e-01,"F_upper":8.020718681099e-01,"Z":5.725e-13,"sigma":2.055980764000}
+{"item": ["block", 39257617, 40827922], "returncode": 0, "seconds": 1044.4067866802216, "stderr_tail": ""}
+{"mode":"block","Nminus":31025863,"Nplus":32266898,"F_lower":7.886063629426e-01,"F_upper":7.886063629426e-01,"Z":8.172e-13,"sigma":2.035978194920}
+{"item": ["block", 31025863, 32266898], "returncode": 0, "seconds": 859.1905980110168, "stderr_tail": ""}
+{"mode":"block","Nminus":20153803,"Nplus":20959956,"F_lower":7.596738731956e-01,"F_upper":7.596738731956e-01,"Z":1.569e-12,"sigma":1.999306802858}
+{"item": ["block", 20153803, 20959956], "returncode": 0, "seconds": 554.9421563148499, "stderr_tail": ""}
+{"mode":"block","Nminus":16564954,"Nplus":17227553,"F_lower":7.443742993918e-01,"F_upper":7.443742993918e-01,"Z":2.109e-12,"sigma":1.982637984426}
+{"item": ["block", 16564954, 17227553], "returncode": 0, "seconds": 474.25204730033875, "stderr_tail": ""}
+{"mode":"block","Nminus":14726182,"Nplus":15315230,"F_lower":7.344525876817e-01,"F_upper":7.344525876817e-01,"Z":2.519e-12,"sigma":1.972636692254}
+{"item": ["block", 14726182, 15315230], "returncode": 0, "seconds": 404.326847076416, "stderr_tail": ""}
+{"mode":"block","Nminus":10760274,"Nplus":11190685,"F_lower":7.049328795504e-01,"F_upper":7.049328795504e-01,"Z":4.045e-12,"sigma":1.945966584050}
+{"item": ["block", 10760274, 11190685], "returncode": 0, "seconds": 289.52894854545593, "stderr_tail": ""}
+{"mode":"block","Nminus":8844158,"Nplus":9197925,"F_lower":6.839451804070e-01,"F_upper":6.839451804070e-01,"Z":5.436e-12,"sigma":1.929297753312}
+{"item": ["block", 8844158, 9197925], "returncode": 0, "seconds": 234.13343691825867, "stderr_tail": ""}
+{"mode":"block","Nminus":7269252,"Nplus":7560023,"F_lower":6.607448883052e-01,"F_upper":6.607448883052e-01,"Z":7.306e-12,"sigma":1.912628936229}
+{"item": ["block", 7269252, 7560023], "returncode": 0, "seconds": 194.5208878517151, "stderr_tail": ""}
+{"mode":"block","Nminus":5107276,"Nplus":5311568,"F_lower":6.126431360046e-01,"F_upper":6.126431360046e-01,"Z":1.243e-11,"sigma":1.882625023549}
+{"item": ["block", 5107276, 5311568], "returncode": 0, "seconds": 137.03704810142517, "stderr_tail": ""}
+{"mode":"block","Nminus":4197807,"Nplus":4365720,"F_lower":5.819371479963e-01,"F_upper":5.819371479963e-01,"Z":1.670e-11,"sigma":1.865956188343}
+{"item": ["block", 4197807, 4365720], "returncode": 0, "seconds": 109.69682049751282, "stderr_tail": ""}
+{"mode":"block","Nminus":3450288,"Nplus":3588300,"F_lower":5.480344935088e-01,"F_upper":5.480344935088e-01,"Z":2.243e-11,"sigma":1.849287302422}
+{"item": ["block", 3450288, 3588300], "returncode": 0, "seconds": 92.53989887237549, "stderr_tail": ""}
+{"mode":"block","Nminus":2726810,"Nplus":2835883,"F_lower":5.027170531279e-01,"F_upper":5.027170531279e-01,"Z":3.195e-11,"sigma":1.829284653790}
+{"item": ["block", 2726810, 2835883], "returncode": 0, "seconds": 72.19357252120972, "stderr_tail": ""}
+{"mode":"block","Nminus":2072149,"Nplus":2155035,"F_lower":4.427864648775e-01,"F_upper":4.427864648775e-01,"Z":4.825e-11,"sigma":1.805948227233}
+{"item": ["block", 2072149, 2155035], "returncode": 0, "seconds": 54.76786971092224, "stderr_tail": ""}
+{"mode":"block","Nminus":1771279,"Nplus":1842131,"F_lower":4.048114580829e-01,"F_upper":4.048114580829e-01,"Z":6.107e-11,"sigma":1.792613057610}
+{"item": ["block", 1771279, 1842131], "returncode": 0, "seconds": 47.54927349090576, "stderr_tail": ""}
+{"mode":"block","Nminus":1244474,"Nplus":1294253,"F_lower":3.084540543695e-01,"F_upper":3.084540543695e-01,"Z":1.037e-10,"sigma":1.762608998235}
+{"item": ["block", 1244474, 1294253], "returncode": 0, "seconds": 32.56604290008545, "stderr_tail": ""}
+{"mode":"block","Nminus":1022864,"Nplus":1063779,"F_lower":2.478571796812e-01,"F_upper":2.478571796812e-01,"Z":1.391e-10,"sigma":1.745939952970}
+{"item": ["block", 1022864, 1063779], "returncode": 0, "seconds": 27.30192232131958, "stderr_tail": ""}
+{"mode":"block","Nminus":840719,"Nplus":874348,"F_lower":1.818235434277e-01,"F_upper":1.818235434277e-01,"Z":1.866e-10,"sigma":1.729271084352}
+{"item": ["block", 840719, 874348], "returncode": 0, "seconds": 21.58609628677368, "stderr_tail": ""}
+{"mode":"block","Nminus":691008,"Nplus":718649,"F_lower":1.100596526804e-01,"F_upper":1.100596526804e-01,"Z":2.503e-10,"sigma":1.712602067809}
+{"item": ["block", 691008, 718649], "returncode": 0, "seconds": 17.784279108047485, "stderr_tail": ""}
+{"task": 5, "done": true, "end": 1793408425.978141}

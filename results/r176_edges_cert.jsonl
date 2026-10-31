@@ -1,0 +1,2 @@
+{"mode":"edges","N0":691008,"N1":100000000,"E_hi":1.6388608331e+00,"E_lo":5.3254646938e-01,"E_arg":5.5565882858e-01,"need":4.438258e-07,"e_barrier":6.1416662102e-04,"upper_S":6.0514848325e-01,"upper_dist":2.102768e-01,"upper_ok":true,"tail_S":9.2321879000e-01,"e_N1":2.040e-11,"tail_ok":true,"right_dist":4.035920e-02,"right_ok":true}
+{"mode":"leftedge","t":0.17100000000000001,"points":29493,"min_abs_f":1.4672622940e+00,"max_abs_arg":5.9905296587e-01,"slack":7.511654e-04,"dist":7.8098532388e-01,"need":4.438258e-07,"ok":true}

@@ -1,0 +1,4 @@
+{"task": 6, "start": 1793450074.4228954, "items": [["blockpart", 699345, 700744, 2, 209522457, {"DBN_MOLL": "/app/mollifier_y300.txt", "DBN_TIGHT": 1}]]}
+{"mode":"block","Nminus":699345,"Nplus":700744,"slo":2,"shi":209522457,"full":true,"F_lower":1.777240977105e-02,"F_upper":1.777240977105e-02,"D":299,"tight":1,"S_upper":6.40940740860043379e-01,"ca1_upper":3.41286848986414149e-01,"Z_upper":3.82489183731285657e-10,"sigma":1.655659864374}
+{"item": ["blockpart", 699345, 700744, 2, 209522457, {"DBN_MOLL": "/app/mollifier_y300.txt", "DBN_TIGHT": 1}], "returncode": 0, "seconds": 380.8551013469696, "stderr_tail": ""}
+{"task": 6, "done": true, "end": 1793450455.5474937}

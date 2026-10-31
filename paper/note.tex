@@ -1,0 +1,164 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref,xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+
+\newcommand{\authorname}{Matthew Davis}
+\newcommand{\repourl}{https://github.com/matthewlay6-maker/dbn-0.169-verification}
+
+\title[A certified computation of $\Lambda\le0.169$]{A certified computation of $\Lambda\le 0.169$\\ with a long mollifier, and an independent check of earlier bounds}
+\author{\authorname}
+\date{Draft for review, \today}
+
+\begin{document}
+\begin{abstract}
+Using the upper-bound criterion of Polymath15 \cite{pm15} and the verification of the Riemann hypothesis to height
+$3{,}000{,}175{,}332{,}800$ by Platt and Trudgian \cite{pt} as the only external computation, we certify in ball
+arithmetic that the de Bruijn--Newman constant satisfies $\Lambda\le t_0+\tfrac12y_0^2=0.169$, with $t_0=0.1658$,
+$y_0=0.08$. The new ingredient is a $b$-weighted mollifier of Selberg--Levinson type,
+$\sum_{d\le 299,\ d\ \text{squarefree}}\mu(d)\prod_{p\mid d}b_p\,P(\log(300/d)/\log 300)\,d^{-s}$, used in the
+hardest range of the canopy. It is combined with the improved triangle inequality of \cite{pm15} and with constants
+taken directly from \cite[Thm.~1.3]{pm15}. Along the way we reproduce Polymath15's $\Lambda\le0.22$ independently,
+record several arithmetic slips in that paper (none affecting its result), and reproduce the first $2{,}000$ windows of
+the recent computer-assisted bound $\Lambda\le0.1787854$ \cite{gomila} exactly. All code, coefficients and logs are
+public \cite{repo}. The result has not been peer reviewed; we ask the reader to check the items in \S\ref{sec:status}.
+\end{abstract}
+\maketitle
+
+\section{Summary and status}\label{sec:status}
+\begin{center}
+\begin{tabular}{p{6.4cm}p{8.4cm}}
+\toprule
+Claim & Status \\ \midrule
+$\Lambda\le0.169$ ($t_0=0.1658$, $y_0=0.08$) & All hypotheses of \cite[Thm.~1.2]{pm15} certified in arb ball arithmetic (\S\ref{sec:main}). \\
+$\Lambda\le0.173,\ 0.176,\ 0.18$ & Earlier certified rows of the same pipeline (Euler mollifiers); superseded. \\
+Polymath15's $\Lambda\le0.22$ & Reproduced independently; slips listed in \S\ref{sec:errata}. \\
+Gomila's $\Lambda\le0.1787854$ \cite{gomila} & First $2{,}000$ finite windows reproduced digit for digit (\S\ref{sec:gomila}). \\
+Limit of the method at this height & Float scouting: $\approx0.168$; $0.165$ is out of reach (\S\ref{sec:limits}). \\
+\bottomrule
+\end{tabular}
+\end{center}
+\noindent Everything rests on \cite[Thms.~1.2, 1.3]{pm15}, the derivative and monotonicity lemmas of \cite[\S8]{pm15},
+and \cite{pt}. Nothing here bears on the Riemann hypothesis beyond the equivalence $\mathrm{RH}\iff\Lambda=0$ \cite{rt}.
+Allowed reading: \emph{subject to those inputs, the Polymath criterion yields $\Lambda\le0.169$.}
+
+\section{Setting}
+With $\Phi(u)=\sum_{n\ge1}(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}$ put $H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du$, so $H_0(z)=\tfrac18\xi(\tfrac12+\tfrac{iz}2)$.
+We use, as published: the criterion \cite[Thm.~1.2]{pm15} (RH to height $X/2$, a zero-free canopy $y_0\le y\le1$ for
+$x\ge X$ at $t=t_0$, and a barrier on $[X,X+1]\times[y_0,1]\times[0,t_0]$ give $\Lambda\le t_0+\frac12y_0^2$), and the
+effective approximation $H_t/B_t=f_t+O_\le(e_A+e_B+e_{C,0})$ of \cite[Thm.~1.3]{pm15}, with
+$f_t=\sum_{n\le N}b_n n^{-s_*}+\gamma\sum_{n\le N}n^{y}b_n n^{-\overline{s_*}-\kappa}$, $b_n=e^{\frac t4\log^2n}$.
+
+\section{The certified computation of $\Lambda\le0.169$}\label{sec:main}
+\subsection*{Parameters}
+$t_0=0.1658$, $y_0=0.08$. Barrier centre $X_0=6{,}000{,}347{,}387{,}366$ (so $X=X_0-\tfrac12$ satisfies
+$X/2=3{,}000{,}173{,}693{,}682.75\le T_{\rm PT}$), chosen to make $|\prod_{p\le11}(1-p^{-(1-iX_0)/2})^{-1}|\approx32$ large.
+$N_0=691008$ is constant on the barrier. Canopy split: region A $N\in[691008,1243814]$, region B $N\in[1243814,5\cdot10^8]$, tail $N\ge5\cdot10^8$.
+
+\subsection*{Mollifiers}
+Region A uses the long mollifier $M(s)=\sum_{d\in S}\lambda_d d^{-s}$, $S=\{d\le299:\ \mu(d)\ne0\}$ (183 terms),
+$\lambda_d=\mu(d)\prod_{p\mid d}b_p\,P(x_d)$, $x_d=\log(300/d)/\log300$, $P(x)=x-1.805(x^2-x)$, frozen as exact
+decimal coefficients (file \texttt{stage169/mollifier\_y300.txt}). Any real coefficients give a valid mollifier: the
+argument principle is applied to $M\cdot H_t/B_t$, and the error term is multiplied by the certified
+$\max|M|\le1+\rho$, $\rho=\sum_{d\ge2}|\lambda_d|d^{-\sigma}$, with $|M|\ge1-\rho$ and $|\arg M|\le\arcsin\rho$ used on the
+other edges. Region B uses the Euler factor $\prod_{p\le5}(1-b_pp^{-s})$.
+
+\subsection*{Lower-edge bound}
+For each block $[N_-,N_+]$ we bound $\operatorname{dist}(Mf_t,(-\infty,0])$ uniformly in $T$ by the improved triangle
+inequality of \cite[\S8]{pm15},
+\[F=1-c\alpha_1-\sum_{n\ge2}\max\bigl(|\beta_n-c\alpha_n|,\ r|\beta_n+c\alpha_n|\bigr)n^{-\sigma}-Z,\]
+with coefficients $n/d\le N_-$ kept exactly and those with $N_-<n/d\le N_+$ counted in absolute value, so that the bound
+holds for every $N$ in the block. Constants come directly from \cite[Thm.~1.3, (20)--(21)]{pm15}:
+$\sigma=\frac{1+y_0}2+\frac{t_0}2\log N_--10^{-9}$ and $|\gamma|n^{y}\le e^{0.02y_0}(1+10^{-9})(n/N)^{y}$, in place of
+the convenience constants $0.001$ and $1.03$ of \cite[\S8]{pm15}.
+
+\subsection*{Results (arb ball arithmetic)}
+\begin{center}
+\begin{tabular}{p{5.2cm}p{6.6cm}p{2.8cm}}
+\toprule
+Piece & Certified result & Required \\ \midrule
+(i) RH to $X/2$ & \cite{pt} & external \\
+(iii) Barrier, $t\in[0,0.1658]$ & 24 time slices, no gaps; 1327 steps; $\min|f_t|\ge1.324$; winding $0$ & $>7.03\times10^{-4}$ + slack \\
+(ii) Lower edge, A (115 blocks) & $\min F\ge0.0136527$ (first block) & $>7.67\times10^{-7}$ \\
+(ii) Lower edge, B (153 blocks) & all positive & $>6.54\times10^{-7}$ \\
+(ii) Upper edge $y=1$ & dist $\ge0.01383$ (A), $0.1834$ (B) & $\le7.67\times10^{-7}$ \\
+(ii) Left edge (A) & $\min|f|=1.4850$, dist $\ge0.0577$ & $7.67\times10^{-7}$ \\
+(ii) Internal edge $x_s=19{,}441{,}111{,}665{,}846$ & $\min|f|=1.1811$; dist $\ge0.1326$ (A), $0.6307$ (B) & $\le2.8\times10^{-7}$ \\
+(ii) Tail $N\ge5\cdot10^8$, right edge & $|f|\ge0.1117$; dist $\ge0.0575$ & $\sim10^{-12}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The tail uses \cite[Lemma ``largen'']{pm15} twice (A in arb); monotonicity of the $B$-term in $N$ is proved: its four
+constituent log-derivatives are decreasing in $\log N$ and are $\le-0.88$ at $\log N_1$. The internal vertical edge lets
+the argument principle close separately on the two regions with different mollifiers. The large sums run on Cloud Run
+(881 tasks, 108.6 vCPU-hours) with the C kernel \texttt{cloud/dbn.c} (FLINT~3.0.1); block sums split across tasks are
+recombined in exact rational arithmetic from upward-rounded partial bounds.
+
+\section{Reproduction of Polymath15 and errata}\label{sec:errata}
+At $t_0=y_0=0.2$, $X_0=6\times10^{10}+83952$ we re-derived \cite[\S8]{pm15} and confirm $\Lambda\le0.22$, noting:
+(1) in the bound $e_A+e_B\le3.444\times10^{-9}$ the factor written $1.023$ should be $\approx2.023$ and the exponents
+$0.5999,0.80005$ should be $0.4001,0.79995$ (corrected: $1.36\times10^{-8}$; the total $\le1.25\times10^{-3}$ stands);
+(2) in claim (c), $A=1.9063$ rather than $\le1.88$, so $|f_t-1|\le0.9804$; the claim still holds with margin;
+(3) the claim (b) coefficients are written without the truncation $n/d\le N$; done exactly, the interval minima are
+$0.0202,0.0408,0.0867,0.0525$ (stated: $0.0263,0.0470,0.093,0.060$), all far above $2.15\times10^{-3}$;
+(4) the barrier time-step condition appears to contain a typo ($D_t|t'-t|/(2n)$ for $D_t|t'-t|$).
+We also checked \cite[Thm.~1.3]{pm15} against an independent rigorous evaluation of $H_t$ at 18 points ($x\le1000$).
+
+\section{Independent reproduction of the 0.1787854 pipeline}\label{sec:gomila}
+At commit \texttt{a74738de} of \cite{gomila} we compiled the finite-lane producer with the published flags and reproduced
+the first 2{,}000 windows ($N=690988,\dots,692987$): all 2{,}000 floors agree with the logged values digit for digit
+(minimum $7.91366\times10^{-7}$ at $N=690988$). We note that the certified sweep is compiled with the plain triangle
+weight $|b|+\gamma|a_0|$ (\texttt{-DTRIANGLE\_WEIGHT}), although the same source also implements the improved weight.
+In float scouting at that row, Euler-11 gives a hardest-window bound $\approx1.6\times10^{-5}$ with the plain weight and
+$\approx0.136$ with the improved one; this, together with the long mollifier, accounts for the difference in reach.
+
+\section{What limits the method}\label{sec:limits}
+Float scouting at the hardest window ($N=N_0$), same height (non-rigorous):
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Mollifier (improved weight, tight constants) & approximate wall & comment \\ \midrule
+Euler-5 & $0.1755$ & \\
+Euler-11 & $0.1717$ & per-prime gains $\approx p^{-\sigma}$ \\
+Euler with multi-tap factors per prime & $0.1712$ & only $+0.011$ in $F$ \\
+$b$-weighted long mollifier, $y\approx300$ & $\approx0.168$ & gains saturate by $y\approx300$--$1000$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+At $\Lambda=0.165$ the best floor found is $\approx-0.07$ and at $0.160$ it is $\approx-0.21$. The Theorem~1.3 error
+terms ($\sim5\times10^{-7}$) are never the binding constraint; the binding constraint is the uniform lower bound for the
+mollified Dirichlet polynomial near $N_0$, which only a larger verification height or a new lower-bound technique can move.
+
+\section{Limitations}
+The result is conditional on \cite{pm15,pt} as published. Parameter selection used float scouting; every certified
+inequality is decided on arb ball endpoints. It has not been peer reviewed. Two recent claims, $\Lambda<0.16$ and
+$\Lambda<0.1595$, rest on a different (collision-exclusion) argument whose key numerical leaves are not published; we
+neither confirm nor refute them (Appendix~\ref{app:audit}).
+
+\section{Reproducibility}
+Repository \cite{repo}: \texttt{cloud/dbn.c} (certified kernels: blocks with arbitrary mollifier, barrier, edges, left and
+internal edges), \texttt{cloud/tasks.json} (exact work split), \texttt{results/cert169/} (all task logs),
+\texttt{stage169/} (mollifier coefficients and edge certificates), and the float scouting scripts.
+
+\appendix
+\section{Notes on the certificate for $\Lambda<0.1595$}\label{app:audit}
+The certificate \cite{cert} argues by collision exclusion on $t\in[0.1595,0.1875]$, anchored at its author's
+$\Lambda\le3/16$. Its exterior module asserts $|u_x|>1/400000$ at all real zeros with $x\ge6{,}000{,}000{,}185{,}827$,
+supported by 42 numerical leaves whose outputs are not included and by an analytic bound for $N\ge2{,}299{,}999$.
+A spot check of 2{,}655 real zeros in six windows between $6\times10^{12}$ and $6.6\times10^{13}$ at $t=0.1595$ found
+$\min|\tfrac{d}{dx}(H_t/B_t)|=7.71$ at the zeros, consistent with the claim; a sample cannot confirm it. Publishing the
+leaf outputs and the derivation of the infinite-branch bound would allow independent verification.
+
+\section*{Acknowledgements}
+The code and computations were developed with the assistance of an AI system (Claude, Anthropic); all results were checked as described above.
+
+\begin{thebibliography}{9}
+\bibitem{pm15} D.H.J. Polymath, \emph{Effective approximation of heat flow evolution of the Riemann $\xi$ function, and a new upper bound for the de Bruijn--Newman constant}, Res. Math. Sci. 6 (2019), arXiv:1904.12438.
+\bibitem{pt} D. Platt and T. Trudgian, \emph{The Riemann hypothesis is true up to $3\cdot10^{12}$}, Bull. Lond. Math. Soc. 53 (2021).
+\bibitem{rt} B. Rodgers and T. Tao, \emph{The de Bruijn--Newman constant is non-negative}, Forum Math. Pi 8 (2020).
+\bibitem{gomila} J. Gomila, \emph{dbn-lambda-01787854-candidate-audit}, github.com/judegomila (2026), commit a74738de.
+\bibitem{cert} Certificate for $\Lambda<319/2000$, github.com/teorth/optimizationproblems, PR \#210 (2026).
+\bibitem{arb} F. Johansson, \emph{Arb: efficient arbitrary-precision midpoint-radius interval arithmetic}, IEEE Trans. Comput. 66 (2017).
+\bibitem{repo} \url{\repourl}.
+\end{thebibliography}
+\end{document}

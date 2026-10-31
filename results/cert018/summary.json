@@ -1,0 +1,47 @@
+{
+ "n_blocks": 110,
+ "all_blocks_present": true,
+ "min_F_lower": 0.1100596526804,
+ "need": 3.494030730197663e-07,
+ "blocks_ok": true,
+ "max_F_radius": 0.0,
+ "barrier_slices": [
+  {
+   "ta": 0,
+   "tb": 0.006434874112657683,
+   "t_reached": 0.006444053133731113,
+   "steps": 232,
+   "min_abs_f": 2.106746,
+   "ok": true
+  },
+  {
+   "ta": 0.006434874112657683,
+   "tb": 0.01700752152086075,
+   "t_reached": 0.017017516555113164,
+   "steps": 232,
+   "min_abs_f": 2.424638,
+   "ok": true
+  },
+  {
+   "ta": 0.01700752152086075,
+   "tb": 0.035500834494375404,
+   "t_reached": 0.03551394379576383,
+   "steps": 232,
+   "min_abs_f": 2.337033,
+   "ok": true
+  },
+  {
+   "ta": 0.035500834494375404,
+   "tb": 0.17,
+   "t_reached": 0.1731527284619687,
+   "steps": 232,
+   "min_abs_f": 1.496509,
+   "ok": true
+  }
+ ],
+ "barrier_covers_0_to_t0": true,
+ "barrier_steps": 928,
+ "barrier_min": 1.496509,
+ "nonzero_returncodes": [],
+ "vcpu_seconds": 49583.97524809837
+}

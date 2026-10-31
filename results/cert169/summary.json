@@ -1,0 +1,41 @@
+{
+ "n_blocks": 268,
+ "blocks_assembled": 268,
+ "blocks_bad": [],
+ "min_F_lower": 0.013652687737020488,
+ "need": 7.666319e-07,
+ "all_blocks_ok": true,
+ "weakest": [
+  {
+   "Nminus": 691008,
+   "Nplus": 692391,
+   "D": 299,
+   "pieces": 1,
+   "F_lower": 0.013652687737020488,
+   "ok": true
+  },
+  {
+   "Nminus": 692391,
+   "Nplus": 693776,
+   "D": 299,
+   "pieces": 1,
+   "F_lower": 0.014341658373456186,
+   "ok": true
+  },
+  {
+   "Nminus": 693776,
+   "Nplus": 695164,
+   "D": 299,
+   "pieces": 1,
+   "F_lower": 0.015028316144677221,
+   "ok": true
+  }
+ ],
+ "barrier_slices": 24,
+ "barrier_fail_rows": [],
+ "barrier_covers": true,
+ "barrier_steps": 1327,
+ "barrier_min": 1.324072,
+ "nonzero_returncodes": [],
+ "vcpu_seconds": 391019.8231756687
+}

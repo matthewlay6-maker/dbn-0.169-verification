@@ -1,0 +1,6 @@
+{"task": 236, "start": 1793414858.0553408, "items": [["barrier", 0.08356255528469071, 0.171]]}
+{"mode":"barrier_step","t":0.083562555284690712,"dt":5.566612e-04,"points":3892,"min_abs_f":1.905080e+00,"Dz":6.1512e+02,"Dt":2.8817e+03,"allow":1.412e-06}
+{"mode":"barrier_step","t":0.10317947883345668,"dt":1.136240e-03,"points":1946,"min_abs_f":1.775259e+00,"Dz":2.9705e+02,"Dt":1.3066e+03,"allow":5.878e-07}
+{"mode":"barrier","ta":0.083562555284690712,"tb":0.17100000000000001,"t_reached":0.17509471608875365,"ok":true,"steps":48,"min_abs_f":1.439681e+00,"N":691008,"points_fine":124520}
+{"item": ["barrier", 0.08356255528469071, 0.171], "returncode": 0, "seconds": 716.4111883640289, "stderr_tail": "barrier: N=691008 points=124520 precompute done\n"}
+{"task": 236, "done": true, "end": 1793415574.7341783}
